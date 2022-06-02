@@ -39,17 +39,17 @@ Par convention, nous appliquerons le format suivant :
 <source>
 mleborgne@arch-zen ~/D/m/B/D/2/a/f/projet> tree
 .
-├── input
+├── '''input'''
 │   └── pieceref-filtre
-├── output
-├── source
+├── '''output'''
+├── '''source'''
 │   ├── File - journal-ventes - FY1SXXXX.txt
 │   ├── File - journal-ventes - FY1SXXXY.txt
 │   ├── File - journal-ventes - FY1SXXXZ.txt
 │   ├── File - journal-ventes - FY2SXXXX.txt
 │   ├── File - journal-ventes - FY2SXXXY.txt
 │   └── File - journal-ventes - FY2SXXXZ.txt
-└── trace
+└── '''trace'''
     ├── script1.ipynb
     ├── script2.ipynb
     └── script3.ipynb
