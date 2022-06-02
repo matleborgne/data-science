@@ -21,7 +21,7 @@ formatSource = ['|', 'cp1252']    # [séparateur de champs, encodage]
 formatOutputCsv = [False, '|', ',']   # [index True/False, séparateur de champs, décimal]
 formatDate = '%d/%m/%Y'
 
- # Définition des types de champs
+ # Définition des types de données
 colDate = ['DatePiece']
 colNum = ['MontantUnitaire', 'Qte', 'Total']
 </source>
@@ -78,5 +78,13 @@ Ainsi :
 * '''renomSource''' indique comment renommer le nom des fichiers pour déterminer le nom de la colonne de la '''table des sources'''.
 
 == Format des données ==
+
 L'objectif, assez explicite, est de décrire le format des données source, ainsi que ce qui est souhaité pour le format des données de sortie (output) ainsi que le format souhaité pour l'affichage des dates, ici JJ/MM/AAAA.
 
+== Définition des types de données ==
+
+L'importation des données se fera en suivant la convention d'importation pandas, qui conseille d'importer l'ensemble des données sous le format '''objet''', afin d'éviter de demander à Python d'essayer de déterminer seul le format applicable (ce qui peut mener à des erreurs d'interprétation).
+
+Il s'agit donc d'indiquer dans une liste les colonnes qu'il faut formater a posteriori, principalement :
+* les colonnnes date
+* les colonnes numériques
