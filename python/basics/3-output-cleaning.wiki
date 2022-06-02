@@ -1,3 +1,5 @@
+= Code =
+
 <source lang="python3">
  ### NETTOYAGE OUTPUT
  # Liste des fichiers du dossier output
@@ -15,6 +17,8 @@ if npOutput.size != 0:
     for cible in npCible:
         os.remove(cible)
 </source>
+
+= Explications =
 
 == Liste des fichiers du dossier output ==
 
