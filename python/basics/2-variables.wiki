@@ -10,7 +10,7 @@ pathInput = '../input/'
 pathOutput = '../output/'
 
  # Identification des fichiers source
-nomSource = ['journal-ventes']
+nomSource = ['journal-achats', 'journal-ventes']
 renomSource = np.array([\
    [' - ', '.txt', 'File - '], \
    ['_',   "",     ""]\
@@ -43,12 +43,10 @@ mleborgne@alpine-zen ~/D/m/B/D/2/a/f/projet> '''tree'''
 │   └── pieceref-filtre
 ├── '''output'''
 ├── '''source'''
+│   ├── File - journal-achats - FY1SXXXX.txt
+│   ├── File - journal-achats - FY2SXXXX.txt
 │   ├── File - journal-ventes - FY1SXXXX.txt
-│   ├── File - journal-ventes - FY1SXXXY.txt
-│   ├── File - journal-ventes - FY1SXXXZ.txt
 │   ├── File - journal-ventes - FY2SXXXX.txt
-│   ├── File - journal-ventes - FY2SXXXY.txt
-│   ├── File - journal-ventes - FY2SXXXZ.txt
 │   └── Filez - synthese.xlsx
 └── '''trace'''
     ├── script1.ipynb
@@ -60,3 +58,11 @@ mleborgne@alpine-zen ~/D/m/B/D/2/a/f/projet> '''tree'''
 * '''output''' contiendra les fichiers de sortie ;
 * '''source''' contiendra les fichiers bruts non modifiés ;
 * '''trace''' contiendra les scripts python (ici jupyter-notebook).
+
+== Identification des fichiers source ==
+
+Cette partie comporte un triple objectif :
+* '''Sélectionner''' les fichiers à retenir dans le dossier source, en excluant les fichiers non pertinents ;
+* '''Classer''' les fichiers retenus selon le jeu de données cible ;
+* '''Nommer''' les futures tables du jeu de données cible.
+
