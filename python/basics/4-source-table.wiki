@@ -16,7 +16,8 @@ for nom in nomSource:
  # Renommage des colonnes source
  # Trouve chaque élément i de la ligne 0 dans la ligne 1 et le remplace par lui
 for i in renomSource[0]:
-    dfSOURCE.columns = dfSOURCE.columns.str.replace(i, str(renomSource[1][trouve(i, renomSource)[1]])[2:-2], regex=True)
+    dfSOURCE.columns = dfSOURCE.columns.str.replace(i, \
+       str(renomSource[1][trouve(i, renomSource)[1]])[2:-2], regex=True)
 
  # Extrait du résultat
 dfSOURCE.head()
