@@ -1,26 +1,31 @@
 = Code =
 
 <source lang="python3">
- ### VISUALISATION SUR UN NOTEBOOK .IPYNB - JUPYTER, IPYTHON, ETC.
+ ### VISUALISATION D'UN DATAFRAME DF SUR UN NOTEBOOK .IPYNB
  # Visualiser l'intégralité du jeu de données (automatiquement coupé si trop long)
-dfTRAV
-dfTRAV.head() # les 5 premières lignes
-dfTRAV.head(30) # les 30 premières lignes
-dfTRAV.tail() # les 5 dernières lignes
+df
+df.head() # les 5 premières lignes
+df.head(30) # les 30 premières lignes
+df.tail() # les 5 dernières lignes
 
  # Visualiser une colonne spécifique
-dfTRAV['ValeurTot']
-dfTRAV['ValeurTot'].head() # fonctionnement identique, 5 premières lignes
+df['ValeurTot']
+df['ValeurTot'].head() # fonctionnement identique, 5 premières lignes
  # etc.
 
  # Obtenir d'autres informations basiques
-dfTRAV.shape[0] # nombre de lignes
-dfTRAV.shape[1] # nombre de colonnes
-dfTRAV.dtypes # type de données pour chaque colonne (objet, numérique, date, etc.)
+df.shape[0] # nombre de lignes
+df.shape[1] # nombre de colonnes
+df.dtypes # type de données pour chaque colonne (objet, numérique, date, etc.)
 
- ### VISUALISATION SUR UN SCRIPT BRUT .PY
+ ### VISUALISATION D'UN DATAFRAME DF SUR UN SCRIPT BRUT .PY
  # Même modèle, mais avec la fonction print()
-print(dfTRAV.head())
+print(df.head())
+</source>
+
+<source lang="python3">
+ # Visualisation dans notre exemple (df = dictionnaire, df['achats'] = dataframe achats)
+df['achats'].head()
 </source>
 
 <source>
