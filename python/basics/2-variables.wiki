@@ -37,7 +37,7 @@ Ainsi, on nommera les fichiers de sortie ici sous la forme : <br>
 Spécifie l'organisation des dossiers par rapport à l'emplacement du script. <br>
 Par convention, nous appliquerons le format suivant :
 <source>
-mleborgne@arch-zen ~/D/m/B/D/2/a/f/projet> '''tree'''
+mleborgne@alpine-zen ~/D/m/B/D/2/a/f/projet> '''tree'''
 .
 ├── '''input'''
 │   └── pieceref-filtre
@@ -54,3 +54,8 @@ mleborgne@arch-zen ~/D/m/B/D/2/a/f/projet> '''tree'''
     ├── script2.ipynb
     └── script3.ipynb
 </source>
+
+* '''input''' contiendra les données externes à intégrer au script (tables, etc.) ;
+* '''output''' contiendra les fichiers de sortie ;
+* '''source''' contiendra les fichiers bruts non modifiés ;
+* '''trace''' contiendra les scripts python (ici jupyter-notebook).
