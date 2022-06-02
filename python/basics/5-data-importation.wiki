@@ -43,7 +43,7 @@ pneusDic = {\
  'tricycle':3}
 </source>
 
-L'avantage du dictionnaire est de pouvoir faire parcourir de manière '''transparente''' à un élément, par exemple :
+L'avantage du dictionnaire est de pouvoir parcourir de manière '''transparente''' à un élément, par exemple :
 <source lang="python3">
  # Obtenir le nombre de pneus d'une voiture
  # ... avec la liste
@@ -57,4 +57,8 @@ Out[]:
 2
 </source>
 
-Ici, comme on va manipuler un ensemble de jeux de données, qu'on veut effectivement parcourir de manière transparente, on crée un dictionnaire '''df''' (df pour DataFrame)
+Ici, comme on va manipuler un ensemble de jeux de données, qu'on veut effectivement parcourir de manière transparente, on crée un dictionnaire '''df''' (df pour DataFrame). <br>
+
+== Création des DataFrame vides ==
+
+On remplit ensuite le dictionnaire avec les entrées correspondantes aux colonnes de la '''table source'''.
