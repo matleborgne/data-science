@@ -11,6 +11,13 @@ pathSource = '../source/'
 pathInput = '../input/'
 pathOutput = '../output/'
 
+ # Identification des fichiers source
+nomSource = ['journal-ventes']
+renomSource = np.array([\
+   [' - ', '.txt', 'File - '], \
+   ['_',   "",     ""]\
+      ])   # expressions régulières activées
+
  # Format de données
 formatSource = ['|', 'iso-8859-1']    # [séparateur de champs, encodage]
 formatOutputCsv = [False, '|', ',']   # [index True/False, séparateur de champs, décimal]
