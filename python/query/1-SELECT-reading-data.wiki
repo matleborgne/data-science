@@ -11,7 +11,10 @@ dfTRAV.tail() # les 5 dernières lignes
  # Visualiser une colonne spécifique
 dfTRAV['ValeurTot']
 dfTRAV['ValeurTot'].head() # fonctionnement identique, 5 premières lignes
- # etc.
+
+ # Visualiser un ensemble de colonne spécifiques
+colonnes = ['ValeurUnit', 'Qte', 'ValeurTot']
+dfTRAV[colonnes]
 
  # Obtenir d'autres informations basiques
 dfTRAV.shape[0] # nombre de lignes
