@@ -1,4 +1,4 @@
-== Code ==
+= Code =
 <source lang="python3">
  ### IMPORTATION SOURCE
  # Création du dictionnaire de DataFrames, et des DataFrames vides
@@ -27,6 +27,8 @@ Out[]:
 3  1007XXXX88     20180101       118,00     1      118,00
 4  1007XXXX89     20180101         5,00     5       25,00
 </source>
+
+= Explications =
 
 == Dictionnaire de DataFrames ==
 
