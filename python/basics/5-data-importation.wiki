@@ -74,3 +74,9 @@ Out[]:
 {'achats': Empty DataFrame     Columns: []     Index: [],
 'ventes': Empty DataFrame      Columns: []     Index: []}
 </source>
+
+== Importation des données ==
+
+Une double boucle '''for''' parcoure :
+* chaque '''colonne''' de la table source, représentant chaque DataFrame final ;
+* chaque '''ligne''' de la table source, représentant les fichiers à concaténer.
