@@ -12,10 +12,6 @@ pathOutput = '../output/'
 
  # Identification des fichiers source
 nomSource = ['achats', 'ventes']
-renomSource = np.array([\
-   [' _ ', '.txt', 'File - ', '_S*', '-'], \
-   ["",    "",     "",        "",    '_']\
-      ])   # expressions régulières activées
 
  # Format des données
 formatSource = ['|', 'cp1252']    # [séparateur de champs, encodage]
@@ -69,14 +65,12 @@ Cette partie comporte un triple objectif :
 
 L'objectif est d'obtenir la '''table des sources''' suivante :
 <source>
-|   |             journal_achats              |             journal_ventes              |
+|   |                 achats                  |                 ventes                  |
 | 0 | ../source/File _ journal-achats_S1.txt  | ../source/File _ journal-ventes_S1.txt  |
 | 1 | ../source/File _ journal-achats_S2.txt  | ../source/File _ journal-ventes_S2.txt  |
 </source>
 
-Ainsi :
-* '''nomSource''' permet d'identifier, dans le libellé, les termes caractéristiques (ici achats et ventes) ;
-* '''renomSource''' indique comment renommer le nom des fichiers pour déterminer le nom de la colonne de la '''table des sources'''.
+Ainsi, '''nomSource''' permet d'identifier, dans le libellé, les termes caractéristiques (ici achats et ventes).
 
 == Format des données ==
 
