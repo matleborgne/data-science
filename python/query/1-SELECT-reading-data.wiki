@@ -1,18 +1,18 @@
 = Code =
 
 <source lang="python3">
-# Visualiser l'intégralité du jeu de données (automatiquement coupé si trop long)
+ # Visualiser l'intégralité du jeu de données (automatiquement coupé si trop long)
 dfTRAV
 dfTRAV.head() # les 5 premières lignes
 dfTRAV.head(30) # les 30 premières lignes
 dfTRAV.tail() # les 5 dernières lignes
 
-# Visualiser une colonne spécifique
+ # Visualiser une colonne spécifique
 dfTRAV['Montantdevise']
 dfTRAV['Montantdevise'].head() # fonctionnement identique, 5 premières lignes
-# etc.
+ # etc.
 
-# Obtenir d'autres informations basiques
+ # Obtenir d'autres informations basiques
 dfTRAV.shape[0] # nombre de lignes
 dfTRAV.shape[1] # nombre de colonnes
 dfTRAV.dtypes # type de données pour chaque colonne (objet, numérique, date, etc.)
