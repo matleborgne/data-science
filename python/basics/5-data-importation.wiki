@@ -68,9 +68,6 @@ df
 </source>
 <source>
 Out[]:
-{'achats': Empty DataFrame
-Columns: []
-Index: [], 'ventes': Empty DataFrame
-Columns: []
-Index: []}
+{'achats': Empty DataFrame     Columns: []     Index: [],
+'ventes': Empty DataFrame      Columns: []     Index: []}
 </source>
