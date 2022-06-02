@@ -1,6 +1,7 @@
 = Code =
 
 <source lang="python3">
+ ### VISUALISATION SUR UN NOTEBOOK .IPYNB - JUPYTER, IPYTHON, ETC.
  # Visualiser l'intégralité du jeu de données (automatiquement coupé si trop long)
 dfTRAV
 dfTRAV.head() # les 5 premières lignes
@@ -16,4 +17,8 @@ dfTRAV['ValeurTot'].head() # fonctionnement identique, 5 premières lignes
 dfTRAV.shape[0] # nombre de lignes
 dfTRAV.shape[1] # nombre de colonnes
 dfTRAV.dtypes # type de données pour chaque colonne (objet, numérique, date, etc.)
+
+ ### VISUALISATION SUR UN SCRIPT BRUT .PY
+ # Même modèle, mais avec la fonction print()
+print(dfTRAV.head())
 </source>
