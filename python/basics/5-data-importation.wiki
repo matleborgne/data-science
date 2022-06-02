@@ -26,3 +26,11 @@ Out[]:
 3  1007XXXX88     20180101       118,00     1      118,00
 4  1007XXXX89     20180101         5,00     5       25,00
 </source>
+
+== Dictionnaire de DataFrames ==
+
+Afin de stocker les différents jeux de données, on crée une variable '''df''' de type '''dictionnaire'''.
+Pour rappel, un dictionnaire est un objet qui stocke d'autres objets et les identifie à travers une '''clé''' ou un '''indice'''. Par exemple :
+<source>
+
+</source>
