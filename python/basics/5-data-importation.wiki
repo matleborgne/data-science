@@ -57,4 +57,4 @@ Out[]:
 2
 </source>
 
-Ici, comme on va manipuler un ensemble de jeux de données, qu'on veut effectivement parcourir de manière
+Ici, comme on va manipuler un ensemble de jeux de données, qu'on veut effectivement parcourir de manière transparente, on crée un dictionnaire '''df''' (df pour DataFrame)
