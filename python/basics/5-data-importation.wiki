@@ -1,1 +1,25 @@
-d
+<source lang="python3">
+ ### IMPORTATION SOURCE
+ # Création du dictionnaire de DataFrames, et des DataFrames vides
+df = {}
+for nom in dfSOURCE.columns:
+    df[nom] = pd.DataFrame()
+
+ # Importation des données dans les DataFrames
+for nom in dfSOURCE.columns:
+    for fichier in dfSOURCE[nom].loc[dfSOURCE[nom].notna()]:
+        dfTEMP = pd.read_csv(fichier, sep=formatSource[0], encoding=formatSource[1], dtype=object)
+        df[nom] = pd.concat([df[nom], dfTEMP])
+    df[nom] = df[nom].reset_index()
+    del df[nom]['index']
+
+ # Extrait du résultat
+df[dfSOURCE.columns[0]].head()
+</source>
+
+<source>
+Out[]:
+|   |                 achats                  |                 ventes                  |
+| 0 | ../source/File _ journal-achats_S1.txt  | ../source/File _ journal-ventes_S1.txt  |
+| 1 | ../source/File _ journal-achats_S2.txt  | ../source/File _ journal-ventes_S2.txt  |
+</source>
