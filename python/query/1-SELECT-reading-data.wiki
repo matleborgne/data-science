@@ -1,7 +1,7 @@
 = Code =
 
 <source lang="python3">
- ### VISUALISATION D'UN DATAFRAME DF SUR UN NOTEBOOK .IPYNB
+ ### VISUALISATION D'UN DATAFRAME DFTRAV SUR UN NOTEBOOK .IPYNB
  # Visualiser l'intégralité du jeu de données (automatiquement coupé si trop long)
 dfTRAV
 dfTRAV.head() # les 5 premières lignes
@@ -18,7 +18,7 @@ dfTRAV.shape[0] # nombre de lignes
 dfTRAV.shape[1] # nombre de colonnes
 dfTRAV.dtypes # type de données pour chaque colonne (objet, numérique, date, etc.)
 
- ### VISUALISATION D'UN DATAFRAME DF SUR UN SCRIPT BRUT .PY
+ ### VISUALISATION D'UN DATAFRAME DFTRAV SUR UN SCRIPT BRUT .PY
  # Même modèle, mais avec la fonction print()
 print(dfTRAV.head())
 </source>
