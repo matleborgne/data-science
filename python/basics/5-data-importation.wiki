@@ -80,3 +80,20 @@ Out[]:
 Une double boucle '''for''' parcoure :
 * chaque '''colonne''' de la table source, représentant chaque DataFrame final ;
 * chaque '''ligne''' de la table source, représentant les fichiers à concaténer.
+
+Trois étapes sont alors réalisées :
+* un DataFrame temporaire est créé (dfTEMP), important le fichier de type CSV avec les paramètres choisis durant la phase variables ;
+* une concaténation est effectuée sur le DataFrame contenu dans le dictionnaire ;
+* le numéro d'index est réinitialisé (ce qui a pour effet de créer une colonne index dans le jeu de données, qu'il convient alors de supprimer).
+
+Il est important de réinitialiser l'index si l'on veut travailler avec. Si on ne le fait pas, l'appel à un numéro d'index retournera plusieurs résultats :
+<source lang="python3">
+ # Exemple d'affichage de la 4e ligne -> index 3
+df['achats'].loc[3]
+</source>
+<source>
+Out[]:
+     PieceNum    PieceDate   ValeurUnit   Qte   ValeurTot
+3  1007XXXX88     20180101       118,00     1      118,00
+3  1012XXXX24     20180701        20,00     4       80,00
+</source>
