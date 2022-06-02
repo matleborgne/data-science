@@ -1,7 +1,12 @@
 # Déclaration des variables
 
 <source lang="python3">
- # Emplacements
+ # Suivi de l'étape
+exercice = '2018'
+etape = '1.1 Lorem Ipsum'
+autreDonnee = ''
+ 
+ # Emplacements des données
 pathSource = '../source/'
 pathInput = '../input/'
 pathOutput = '../output/'
@@ -11,7 +16,7 @@ formatSource = ['|', 'iso-8859-1']    # [séparateur de champs, encodage]
 formatOutputCsv = [False, '|', ',']   # [index True/False, séparateur de champs, décimal]
 formatDate = '%d/%m/%Y'
 
- # Typage des champs
+ # Définition des types de champs
 colDate = ['DatePiece']
 colNum = ['MontantUnitaire', 'Qte', 'Total']
 </source>
