@@ -26,7 +26,7 @@ dfSOURCE.head()
 
 <source>
 Out[]:
-|   |             journal_achats              |             journal_ventes              |
+|   |                 achats                  |                 ventes                  |
 | 0 | ../source/File _ journal-achats_S1.txt  | ../source/File _ journal-ventes_S1.txt  |
 | 1 | ../source/File _ journal-achats_S2.txt  | ../source/File _ journal-ventes_S2.txt  |
 </source>
