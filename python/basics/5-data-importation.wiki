@@ -41,6 +41,8 @@ nombrePneus = {\
 
 L'avantage du dictionnaire est de pouvoir faire parcourir de manière '''transparente''' à un élément, par exemple :
 <source lang="python3">
-In [34]: nombrePneus['voiture']
+ # Obtenir le nombre de pneus d'une voiture
+nombrePneus['voiture']
+ # Résultat
 Out[34]: 4
 </source>
