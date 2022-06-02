@@ -1,8 +1,8 @@
 <source lang="python3">
  # Suivi de l'étape
 exercice = '2018'
-etape = '1.1 Lorem Ipsum'
-autreDonnee = ''
+etape = '1.1_Lorem_Ipsum'
+autreDonnee = 'info_interessante'
  
  # Emplacements des données
 pathSource = '../source/'
@@ -26,4 +26,8 @@ colDate = ['DatePiece']
 colNum = ['MontantUnitaire', 'Qte', 'Total']
 </source>
 
-# Suivi de l'étape
+== Suivi de l'étape ==
+
+Permet de suivre les différents niveaux de scripts, et déteminera également le nommage des fichiers exportés.
+Ainsi, on nommera les fichiers de sortie ici sous la forme : <br>
+'''../output/2018-1.1_Lorem_Ipsum-info-interessante.xlsx'''
