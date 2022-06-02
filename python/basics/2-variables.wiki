@@ -10,7 +10,7 @@ pathInput = '../input/'
 pathOutput = '../output/'
 
  # Identification des fichiers source
-nomSource = ['journal-achats', 'journal-ventes']
+nomSource = ['achats', 'ventes']
 renomSource = np.array([\
    [' _ ', '.txt', 'File - ', '_S*', '-'], \
    ["",    "",     "",        "",    '_']\
@@ -66,9 +66,13 @@ Cette partie comporte un triple objectif :
 * '''Classer''' les fichiers retenus selon le jeu de données cible ;
 * '''Nommer''' les futures colonnes de la table résumant les sources de données.
 
-L'objectif est d'obtenir la table suivante :
+L'objectif est d'obtenir la table "source" suivante :
 <source>
 |   |             journal_achats              |             journal_ventes              |
 | 0 | ../source/File _ journal-achats_S1.txt  | ../source/File _ journal-ventes_S1.txt  |
 | 1 | ../source/File _ journal-achats_S2.txt  | ../source/File _ journal-ventes_S2.txt  |
 </source>
+
+Ainsi :
+* '''nomSource''' permet d'identifier, dans le libellé, les termes caractéristiques (ici achats et ventes) ;
+* '''renomSource'''
