@@ -1,2 +1,8 @@
 # Déclaration des variables
 
+<source lang="python3">
+ # Sources de données
+ pathSource = '../source/'
+
+ # Format de données source
+</source>
