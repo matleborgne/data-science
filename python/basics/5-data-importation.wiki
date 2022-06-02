@@ -86,7 +86,7 @@ Trois étapes sont alors réalisées :
 * une concaténation est effectuée sur le DataFrame contenu dans le dictionnaire ;
 * le numéro d'index est réinitialisé (ce qui a pour effet de créer une colonne index dans le jeu de données, qu'il convient alors de supprimer).
 
-Il est important de réinitialiser l'index si l'on veut travailler avec. Si on ne le fait pas, l'appel à un numéro d'index retournera plusieurs résultats :
+Il est important de réinitialiser l'index si l'on veut travailler avec. Sinon, l'appel à un numéro d'index retournera plusieurs résultats, chaque fichier source ayant sa propre ligne numérotée ainsi :
 <source lang="python3">
  # Exemple d'affichage de la 4e ligne -> index 3
 df['achats'].loc[3]
@@ -95,5 +95,5 @@ df['achats'].loc[3]
 Out[]:
      PieceNum    PieceDate   ValeurUnit   Qte   ValeurTot
 3  1007XXXX88     20180101       118,00     1      118,00
-3  1012XXXX24     20180701        20,00     4       80,00
+3  1008XXXX05     20180701        20,00     4       80,00
 </source>
