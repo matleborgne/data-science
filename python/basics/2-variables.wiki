@@ -23,7 +23,7 @@ formatDate = '%d/%m/%Y'
 
  # Définition des types de données
 colDate = ['DatePiece']
-colNum = ['MontantUnitaire', 'Qte', 'Total']
+colNum = ['ValeurUnit', 'Qte', 'ValeurTot']
 </source>
 
 == Suivi de l'étape ==
