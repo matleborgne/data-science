@@ -31,3 +31,26 @@ colNum = ['MontantUnitaire', 'Qte', 'Total']
 Permet de suivre les différents niveaux de scripts, et déteminera également le nommage des fichiers exportés.
 Ainsi, on nommera les fichiers de sortie ici sous la forme : <br>
 '''../output/2018-1.1_Lorem_Ipsum-info-interessante.xlsx'''
+
+== Emplacement des données ==
+
+Spécifie l'organisation des dossiers par rapport à l'emplacement du script. <br>
+Par convention, nous appliquerons le format suivant :
+<source>
+mleborgne@arch-zen ~/D/m/B/D/2/a/f/projet> tree
+.
+├── input
+│   └── pieceref-filtre
+├── output
+├── source
+│   ├── File - journal-ventes - FY1SXXXX.txt
+│   ├── File - journal-ventes - FY1SXXXY.txt
+│   ├── File - journal-ventes - FY1SXXXZ.txt
+│   ├── File - journal-ventes - FY2SXXXX.txt
+│   ├── File - journal-ventes - FY2SXXXY.txt
+│   └── File - journal-ventes - FY2SXXXZ.txt
+└── trace
+    ├── script1.ipynb
+    ├── script2.ipynb
+    └── script3.ipynb
+</source>
