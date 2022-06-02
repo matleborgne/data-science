@@ -3,8 +3,8 @@
 <source lang="python3">
  ### AVEC DF.QUERY
  # Définir ses critères sous forme d'une chaîne de caractères, par ex :
-criteresEx1 = 'Montant >= 0 and Qte != 5'
-criteresEx2 = 'Date.notna() and (Qte > 0 or Montant > 0)' # /!\ priorités entre "and" et "or"
+criteresEx1 = 'Montant >= 0 and PieceNum != "1007XXXX85"'  # /!\ guillemets différents
+criteresEx2 = 'Date.notna() and (Qte > 0 or Montant > 0)'  # /!\ priorités entre "and" et "or"
 criteresEx3 = 'DatePiece.notna()'            # possibilité d'intégrer des fonctions pandas
 
 listePieces = ['00001', '00002', '00003']    # on veut les lignes correspondant à ces 3 pièces
@@ -16,7 +16,10 @@ dfTRAV.query(criteresEx4, engine='python')
  # Le résultat est également un DataFrame que l'on peut stocker dans une variable
 dfFILTRE = dfTRAV.query(criteresEx4, engine='python')
  
+ 
  ### AVEC DF.LOC
+ # 
+
 
 </source>
 
