@@ -1,5 +1,3 @@
-# Script d'initialisation
-
 <source lang="python3">
  # Modules
 import \
@@ -13,12 +11,14 @@ pd.set_option('display.float_format', '{:,.2f}'.format)
 pd.options.mode.chained_assignment = None
 </source>
 
+# Modules
 Importe les modules :
 * '''pandas''' (traitement de données par le biais de “DataFrame” (des jeux de données, des "tableaux") ;
 * '''numpy''' (permet le calcul vectoriel - traitement de millions de lignes ultra-rapidement) ;
 * '''datetime''' (permet de “jouer” avec les formats de dates différents et calculer des écarts en jours, mois, etc.) ;
 * '''os''' (permet d'interragir facilement avec le système d'exploitation - import de fichiers, suppression, renommage, etc.).
 
+# Réglages pandas
 Pose les options suivantes sur '''pandas''' :
 * mode d'affichage des nombre longs : le point comme séparateur décimal, la virgule comme séparateur de milliers (attention, cela gère seulement l'affichage - dans python, le séparateur décimal est le point de toute manière) ;
 * retire l'avertissement de pandas lorsque l'on modifie une tranche (une “slice”) d'un jeu de données, nous demandant si c'est réellement voulu.
