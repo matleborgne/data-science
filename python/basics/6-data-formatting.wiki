@@ -4,14 +4,14 @@
  ### FORMATAGE DES DONNEES
 for nom in dfSOURCE.columns:
  # Colonnes dates
-for colonne in colDate:
-    if df[colonne].dtype == "object":
-        df[colonne] = pd.to_datetime(df[colonne], format="%Y%m%d", errors='coerce')
+    for colonne in colDate:
+        if df[colonne].dtype == "object":
+            df[colonne] = pd.to_datetime(df[colonne], format="%Y%m%d", errors='coerce')
 
  # Colonnes numériques
-for colonne in colNum:
-    if df[colonne].dtype == "object":
-        df[colonne] = pd.to_numeric(df[colonne].str.replace(",","."))
+    for colonne in colNum:
+        if df[colonne].dtype == "object":
+            df[colonne] = pd.to_numeric(df[colonne].str.replace(",","."))
 
  # Extrait du résultat
 df[colDate+colNum].head()
