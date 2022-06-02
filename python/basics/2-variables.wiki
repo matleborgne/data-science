@@ -2,7 +2,9 @@
 
 <source lang="python3">
  # Sources de données
- pathSource = '../source/'
+pathSource = '../source/'
+pathInput = '../input/'
+pathOutput = '../output/'
 
  # Format de données source
 </source>
