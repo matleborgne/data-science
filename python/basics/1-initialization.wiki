@@ -1,14 +1,16 @@
 # Script d'initialisation
 
 <source lang="python3">
-import \
+ # Modules
+ import \
   pandas as pd,\
   numpy as np,\
   datetime as dt,\
   os
 
-pd.set_option('display.float_format', '{:,.2f}'.format)
-pd.options.mode.chained_assignment = None
+ # Réglages pandas
+ pd.set_option('display.float_format', '{:,.2f}'.format)
+ pd.options.mode.chained_assignment = None
 </source>
 
 Importe les modules :
