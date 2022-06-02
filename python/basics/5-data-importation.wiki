@@ -30,7 +30,11 @@ Out[]:
 == Dictionnaire de DataFrames ==
 
 Afin de stocker les différents jeux de données, on crée une variable '''df''' de type '''dictionnaire'''.
-Pour rappel, un dictionnaire est un objet qui stocke d'autres objets et les identifie à travers une '''clé''' ou un '''indice'''. Par exemple :
+Pour rappel, un dictionnaire est un objet qui stocke d'autres objets et les identifie à travers une '''clé''' ou un '''indice'''. <br>
+Par exemple :
 <source>
-
+nombrePneus = {\
+ 'voiture':4,\
+ 'velo':2,\
+ 'tricycle':3}
 </source>
