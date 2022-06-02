@@ -4,18 +4,18 @@
  ### FORMATAGE DES DONNEES
 for nom in dfSOURCE.columns:
 
- # Colonnes dates
+     # Colonnes dates
     for colonne in colDate:
         if df[nom][colonne].dtype == "object":
             df[nom][colonne] = pd.to_datetime(df[nom][colonne], format="%Y%m%d", errors='coerce')
 
- # Colonnes numériques
+     # Colonnes numériques
     for colonne in colNum:
         if df[nom][colonne].dtype == "object":
             df[nom][colonne] = pd.to_numeric(df[nom][colonne].str.replace(",","."))
 
  # Extrait du résultat
-df[colDate+colNum].head()
+df[dfSOURCE.columns[0]][colDate+colNum].head()
 
 </source>
 
