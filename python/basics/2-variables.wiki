@@ -49,7 +49,7 @@ mleborgne@alpine-zen ~/D/m/B/D/2/a/f/projet> '''tree'''
 │   ├── File - journal-ventes - FY2SXXXX.txt
 │   ├── File - journal-ventes - FY2SXXXY.txt
 │   ├── File - journal-ventes - FY2SXXXZ.txt
-│   └── File - zxk - ce fichier n'a rien à voir avec le projet
+│   └── Filez - synthese.xlsx
 └── '''trace'''
     ├── script1.ipynb
     ├── script2.ipynb
