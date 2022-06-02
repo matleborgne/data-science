@@ -64,7 +64,7 @@ mleborgne@alpine-zen ~/D/m/B/D/2/a/f/projet> '''tree'''
 Cette partie comporte un triple objectif :
 * '''Sélectionner''' les fichiers à retenir dans le dossier source, en excluant les fichiers non pertinents ;
 * '''Classer''' les fichiers retenus selon le jeu de données cible ;
-* '''Nommer''' les futures tables du jeu de données cible.
+* '''Nommer''' les futures colonnes de la table résumant les sources de données.
 
 L'objectif est d'obtenir la table suivante :
 <source>
