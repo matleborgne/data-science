@@ -1,3 +1,5 @@
+= Code =
+
 <source lang="python3">
  ### INITIALISATION
  # Modules
@@ -11,6 +13,8 @@ import \
 pd.set_option('display.float_format', '{:,.2f}'.format)
 pd.options.mode.chained_assignment = None
 </source>
+
+= Explications =
 
 == Modules ==
 Importe les modules :
