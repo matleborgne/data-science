@@ -1,4 +1,5 @@
 <source lang="python3">
+ ### VARIABLES
  # Suivi de l'étape
 exercice = '2018'
 etape = '1.1_Lorem_Ipsum'
