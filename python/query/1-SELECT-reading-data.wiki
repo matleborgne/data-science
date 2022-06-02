@@ -8,8 +8,8 @@ dfTRAV.head(30) # les 30 premières lignes
 dfTRAV.tail() # les 5 dernières lignes
 
  # Visualiser une colonne spécifique
-dfTRAV['Montantdevise']
-dfTRAV['Montantdevise'].head() # fonctionnement identique, 5 premières lignes
+dfTRAV['ValeurTot']
+dfTRAV['ValeurTot'].head() # fonctionnement identique, 5 premières lignes
  # etc.
 
  # Obtenir d'autres informations basiques
