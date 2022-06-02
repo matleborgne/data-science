@@ -44,3 +44,7 @@ L'avantage du dictionnaire est de pouvoir faire parcourir de manière '''transpa
  # Obtenir le nombre de pneus d'une voiture
 nombrePneus['voiture']
 </source>
+<source>
+Out[]:
+4
+</source>
