@@ -16,8 +16,8 @@ renomSource = np.array([\
    ["",    "",     "",        "",    '_']\
       ])   # expressions régulières activées
 
- # Format de données
-formatSource = ['|', 'iso-8859-1']    # [séparateur de champs, encodage]
+ # Format des données
+formatSource = ['|', 'cp1252']    # [séparateur de champs, encodage]
 formatOutputCsv = [False, '|', ',']   # [index True/False, séparateur de champs, décimal]
 formatDate = '%d/%m/%Y'
 
@@ -76,3 +76,7 @@ L'objectif est d'obtenir la '''table des sources''' suivante :
 Ainsi :
 * '''nomSource''' permet d'identifier, dans le libellé, les termes caractéristiques (ici achats et ventes) ;
 * '''renomSource''' indique comment renommer le nom des fichiers pour déterminer le nom de la colonne de la '''table des sources'''.
+
+== Format des données ==
+L'objectif, assez explicite, est de décrire le format des données source, ainsi que ce qui est souhaité pour le format des données de sortie (output) ainsi que le format souhaité pour l'affichage des dates, ici JJ/MM/AAAA.
+
