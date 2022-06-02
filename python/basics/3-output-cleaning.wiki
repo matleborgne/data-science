@@ -1,4 +1,5 @@
 <source lang="python3">
+ ### NETTOYAGE OUTPUT
  # Liste des fichiers du dossier output
 listeOutput = [os.path.join(root, name) \
      for root, dirs, files in os.walk(pathOutput) \
