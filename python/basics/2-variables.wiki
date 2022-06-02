@@ -12,8 +12,8 @@ pathOutput = '../output/'
  # Identification des fichiers source
 nomSource = ['journal-achats', 'journal-ventes']
 renomSource = np.array([\
-   [' - ', '.txt', 'File - '], \
-   ['_',   "",     ""]\
+   [' _ ', '.txt', 'File - ', '_S*', '-'], \
+   ["",    "",     "",        "",    '_']\
       ])   # expressions régulières activées
 
  # Format de données
@@ -43,11 +43,11 @@ mleborgne@alpine-zen ~/D/m/B/D/2/a/f/projet> '''tree'''
 │   └── pieceref-filtre
 ├── '''output'''
 ├── '''source'''
-│   ├── File - journal-achats - FY1SXXXX.txt
-│   ├── File - journal-achats - FY2SXXXX.txt
-│   ├── File - journal-ventes - FY1SXXXX.txt
-│   ├── File - journal-ventes - FY2SXXXX.txt
-│   └── Filez - synthese.xlsx
+│   ├── File _ journal-achats_S1.txt
+│   ├── File _ journal-achats_S2.txt
+│   ├── File _ journal-ventes_S1.txt
+│   ├── File _ journal-ventes_S2.txt
+│   └── File _ synthese.xlsx
 └── '''trace'''
     ├── script1.ipynb
     ├── script2.ipynb
@@ -66,3 +66,9 @@ Cette partie comporte un triple objectif :
 * '''Classer''' les fichiers retenus selon le jeu de données cible ;
 * '''Nommer''' les futures tables du jeu de données cible.
 
+L'objectif est d'obtenir la table suivante :
+<source>
+|   |     journal-achats              |     journal-ventes              |
+| 0 | ../source/File - journal-achats - FY1SXXXX.txt  | ../source/File - journal-ventes - FY1SXXXX.txt  |
+| 1 | ../source/File - journal-achats - FY2SXXXX.txt  | ../source/File - journal-ventes - FY2SXXXX.txt |
+</source>
