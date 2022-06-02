@@ -2,15 +2,15 @@
 
 <source lang="python3">
  # Modules
- import \
-  pandas as pd,\
-  numpy as np,\
-  datetime as dt,\
-  os
+import \
+ pandas as pd,\
+ numpy as np,\
+ datetime as dt,\
+ os
 
  # Réglages pandas
- pd.set_option('display.float_format', '{:,.2f}'.format)
- pd.options.mode.chained_assignment = None
+pd.set_option('display.float_format', '{:,.2f}'.format)
+pd.options.mode.chained_assignment = None
 </source>
 
 Importe les modules :
