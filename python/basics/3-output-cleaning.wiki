@@ -1,0 +1,15 @@
+<source lang="python3">
+ # Liste des fichiers dans output
+listeOutput = [os.path.join(root, name) for root, dirs, files in os.walk(pathOutput) for name in files]
+npOutput = np.array(listeOutput)
+
+ # Ciblage des fichiers et nettoyage
+if npOutput.size != 0:
+    npCible = npOutput[np.where(np.char.find(npOutput, f'.txt') >= 0)]
+
+    # Nettoyage
+    for cible in npCible:
+        os.remove(cible)
+</source>
+
+== Suivi de l'étape ==
