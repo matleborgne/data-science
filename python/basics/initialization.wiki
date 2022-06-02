@@ -17,6 +17,6 @@ Importe les modules :
 * '''datetime''' (permet de “jouer” avec les formats de dates différents et calculer des écarts en jours, mois, etc.) ;
 * '''os''' (permet d'interragir facilement avec le système d'exploitation - import de fichiers, suppression, renommage, etc.).
 
-Pose les options suivantes sur pandas :
+Pose les options suivantes sur '''pandas''' :
 * mode d'affichage des nombre longs : le point comme séparateur décimal, la virgule comme séparateur de milliers (attention, cela gère seulement l'affichage - dans python, le séparateur décimal est le point de toute manière) ;
 * retire l'avertissement de pandas lorsque l'on modifie une tranche (une “slice”) d'un jeu de données, nous demandant si c'est réellement voulu.
