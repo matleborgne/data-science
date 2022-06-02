@@ -37,7 +37,7 @@ Ainsi, on nommera les fichiers de sortie ici sous la forme : <br>
 Spécifie l'organisation des dossiers par rapport à l'emplacement du script. <br>
 Par convention, nous appliquerons le format suivant :
 <source>
-mathieu.leborgne@arch-zen ~/D/m/B/D/2/a/f/projet> tree
+mathieuleborgne@arch-zen ~/D/m/B/D/2/a/f/projet> tree
 .
 ├── input
 │   └── pieceref-filtre
