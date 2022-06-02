@@ -1,5 +1,5 @@
 <source lang="python3">
- # Liste des fichiers dans output
+ # Liste des fichiers du dossier output
 listeOutput = [os.path.join(root, name) \
      for root, dirs, files in os.walk(pathOutput) \
      for name in files]
@@ -15,4 +15,13 @@ if npOutput.size != 0:
         os.remove(cible)
 </source>
 
-== Suivi de l'étape ==
+== Liste des fichiers du dossier output ==
+
+On utilise le module '''os''' afin de lister les fichiers du dossier output. <br>
+Ensuite, on stocke la liste obtenue sous forme de série '''numpy'''
+
+== Ciblage des fichiers et nettoyage ==
+
+Cible les fichiers à supprimer selon un critère de nommage donné, via la recherche de texte du module '''numpy'''. <br>
+Ici, nous avons choisi l'extension ".txt". <br>
+Enfin, le module '''os''' va supprimer les fichiers ciblés.
