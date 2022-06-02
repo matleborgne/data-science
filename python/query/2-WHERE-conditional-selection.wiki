@@ -1,1 +1,29 @@
 = Code =
+
+<source lang="python3">
+ ### AVEC DF.QUERY
+ # Définir ses critères
+ criteres
+ 
+ 
+ ### AVEC DF.LOC
+
+</source>
+
+
+
+<source lang="python3">
+ # Visualisation dans notre exemple
+criteres = 'Qte > 4 and ValeurTot > 68 or
+ 
+</source>
+
+<source>
+Out[]:
+     PieceNum      PieceDate   ValeurUnit   Qte   ValeurTot
+0  1007XXXX85     2018-01-01         8.00    10       80.00
+1  1007XXXX86     2018-01-01        10.00     7       70.00
+2  1007XXXX87     2018-01-01        12.00     5       60.00
+3  1007XXXX88     2018-01-01       118.00     1      118.00
+4  1007XXXX89     2018-01-01         5.00     5       25.00
+</source>
