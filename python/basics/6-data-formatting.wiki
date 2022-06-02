@@ -21,12 +21,12 @@ df[dfSOURCE.columns[0]][colDate+colNum].head()
 
 <source>
 Out[]:
-     PieceNum    PieceDate   ValeurUnit   Qte   ValeurTot
-0  1007XXXX85     20180101         8,00    10       80,00
-1  1007XXXX86     20180101        10,00     7       70,00
-2  1007XXXX87     20180101        12,00     5       60,00
-3  1007XXXX88     20180101       118,00     1      118,00
-4  1007XXXX89     20180101         5,00     5       25,00
+    PieceDate  ValeurUnit   Qte  ValeurTot
+0  2018-01-01        8.00    10      80.00
+1  2018-01-01       10.00     7      70.00
+2  2018-01-01       12.00     5      60.00
+3  2018-01-01      118.00     1     118.00
+4  2018-01-01        5.00     5      25.00
 </source>
 
 
