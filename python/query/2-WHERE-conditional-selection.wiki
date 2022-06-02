@@ -2,7 +2,7 @@
 
 <source lang="python3">
  ### AVEC DF.QUERY
- # Définir ses critères sous forme d'une chaîne de caractères, par ex :
+ # Définir les critères sous forme d'une chaîne de caractères, par ex :
 criteresEx1 = 'Montant >= 0 and PieceNum != "1007XXXX85"'  # /!\ guillemets différents
 criteresEx2 = 'Date.notna() and (Qte > 0 or Montant > 0)'  # /!\ priorités entre "and" et "or"
 criteresEx3 = 'DatePiece.notna()'            # possibilité d'intégrer des fonctions pandas
@@ -18,8 +18,13 @@ dfFILTRE = dfTRAV.query(criteresEx4, engine='python')
  
  
  ### AVEC DF.LOC
- # 
+ # Fonctionnement de base : sélection par l'index d'un ensemble de lignes
+index=[0,12,44,56,89,156]
+dfTRAV.loc[index]
 
+ # Définir les critères
+criteres = dfTRAV['Montant'].notna() * dfTRAV['Qte'] == 4
+dfTRAV.loc[criteres]
 
 </source>
 
