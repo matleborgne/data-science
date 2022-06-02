@@ -56,7 +56,7 @@ mleborgne@alpine-zen ~/D/m/B/D/2/a/f/projet> '''tree'''
 
 * '''input''' contiendra les données externes à intégrer au script (tables, etc.) ;
 * '''output''' contiendra les fichiers de sortie ;
-* '''source''' contiendra les fichiers bruts non modifiés ;
+* '''source''' contiendra les fichiers bruts obtenus non modifiés ;
 * '''trace''' contiendra les scripts python (ici jupyter-notebook).
 
 == Identification des fichiers source ==
