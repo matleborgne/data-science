@@ -1,5 +1,32 @@
 = Code =
 
+<source lang="python3">
+ ### FORMATAGE DES DONNEES
+for nom in dfSOURCE.columns:
+ # Colonnes dates
+for colonne in colDate:
+    if df[colonne].dtype == "object":
+        df[colonne] = pd.to_datetime(df[colonne], format="%Y%m%d", errors='coerce')
+
+ # Colonnes numériques
+for colonne in colNum:
+    if df[colonne].dtype == "object":
+        df[colonne] = pd.to_numeric(df[colonne].str.replace(",","."))
+
+ # Extrait du résultat
+df[colDate+colNum].head()
+
+</source>
+
+<source>
+Out[]:
+     PieceNum    PieceDate   ValeurUnit   Qte   ValeurTot
+0  1007XXXX85     20180101         8,00    10       80,00
+1  1007XXXX86     20180101        10,00     7       70,00
+2  1007XXXX87     20180101        12,00     5       60,00
+3  1007XXXX88     20180101       118,00     1      118,00
+4  1007XXXX89     20180101         5,00     5       25,00
+</source>
 
 
 
