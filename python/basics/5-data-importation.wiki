@@ -33,7 +33,11 @@ Afin de stocker les différents jeux de données, on crée une variable '''df'''
 Pour rappel, un dictionnaire est un objet qui stocke d'autres objets et les identifie à travers une '''clé''' ou un '''indice'''. <br>
 Par exemple :
 <source lang="python3">
-nombrePneus = {\
+ # Exemple avec une liste
+pneusLis = [4, 2, 3]
+
+ # Exemple avec un dictionnaire
+pneusDic = {\
  'voiture':4,\
  'velo':2,\
  'tricycle':3}
@@ -42,9 +46,15 @@ nombrePneus = {\
 L'avantage du dictionnaire est de pouvoir faire parcourir de manière '''transparente''' à un élément, par exemple :
 <source lang="python3">
  # Obtenir le nombre de pneus d'une voiture
-nombrePneus['voiture']
+ # ... avec la liste
+pneusLis[1]
+ 
+ # ... avec le dictionnaire
+pneusDic['velo']
 </source>
 <source>
 Out[]:
-4
+2
 </source>
+
+Ici, comme on va manipuler un ensemble de jeux de données, qu'on veut effectivement parcourir de manière
