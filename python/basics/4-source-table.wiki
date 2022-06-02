@@ -1,10 +1,11 @@
 <source lang="python3">
+ ### PREPARATION SOURCE
  # Liste des fichiers dans source
 npSource = np.array([os.path.join(root, name) \
    for root, dirs, files in os.walk(pathSource) \
    for name in files])
 
- # Fonctions de ciblage
+ # Fonction de ciblage
 def trouve(texte, liste):
     return np.where(np.char.find(liste, texte) >= 0)
 
