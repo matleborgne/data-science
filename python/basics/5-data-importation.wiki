@@ -61,7 +61,7 @@ Ici, comme on va manipuler un ensemble de jeux de données, qu'on veut effective
 
 == Création des DataFrame vides ==
 
-On remplit ensuite le dictionnaire avec les entrées correspondantes aux colonnes de la '''table source'''. <brW
+On remplit ensuite le dictionnaire avec les entrées correspondantes aux colonnes de la '''table source'''. <br>
 On obtient alors le dictionnaire suivant :
 <source lang="python3">
 df
