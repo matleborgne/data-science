@@ -1,3 +1,5 @@
+= Code =
+
 <source lang="python3">
  ### VARIABLES
  # Suivi de l'étape
@@ -22,6 +24,8 @@ formatDate = '%d/%m/%Y'
 colDate = ['DatePiece']
 colNum = ['ValeurUnit', 'Qte', 'ValeurTot']
 </source>
+
+= Explications =
 
 == Suivi de l'étape ==
 
