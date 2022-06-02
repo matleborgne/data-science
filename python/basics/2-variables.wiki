@@ -66,7 +66,7 @@ Cette partie comporte un triple objectif :
 * '''Classer''' les fichiers retenus selon le jeu de données cible ;
 * '''Nommer''' les futures colonnes de la table résumant les sources de données.
 
-L'objectif est d'obtenir la table "source" suivante :
+L'objectif est d'obtenir la '''table des sources''' suivante :
 <source>
 |   |             journal_achats              |             journal_ventes              |
 | 0 | ../source/File _ journal-achats_S1.txt  | ../source/File _ journal-ventes_S1.txt  |
@@ -75,4 +75,4 @@ L'objectif est d'obtenir la table "source" suivante :
 
 Ainsi :
 * '''nomSource''' permet d'identifier, dans le libellé, les termes caractéristiques (ici achats et ventes) ;
-* '''renomSource'''
+* '''renomSource''' indique comment renommer le nom des fichiers pour déterminer le nom de la colonne de la '''table des sources'''.
