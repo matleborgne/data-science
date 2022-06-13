@@ -11,6 +11,7 @@ import \
 
  # Réglages pandas
 pd.set_option('display.float_format', '{:,.2f}'.format)
+pd.set_option('display.max_columns', 40)
 pd.options.mode.chained_assignment = None
 </source>
 
@@ -27,4 +28,5 @@ Importe les modules :
 == Réglages pandas ==
 Pose les options suivantes sur '''pandas''' :
 * mode d'affichage des nombre longs : le point comme séparateur décimal, la virgule comme séparateur de milliers (attention, cela gère seulement l'affichage - dans python, le séparateur décimal est le point de toute manière) ;
+* nombre de colonnes à afficher fixé à 40, pour éviter d'avoir la moitié des colonnes masquées ;
 * retire l'avertissement de pandas lorsque l'on modifie une tranche (une “slice”) d'un jeu de données, nous demandant si c'est réellement voulu.
