@@ -54,7 +54,7 @@ This module aims to organize your source files automatically, through patterns i
 What it does is :
 * '''imports modules''' pandas and os ;
 * '''lists files''' in the folder specified by srcPath ;
-* '''creates a DataFrame''' where each column has a label and is filled with files which all have a specific pattern.
+* '''creates a DataFrame''' where each column has a label and is filled with files which follow a specific pattern.
 
 Thus, it needs the following input :
 * srcPath, the path of source files in a string variable ;
