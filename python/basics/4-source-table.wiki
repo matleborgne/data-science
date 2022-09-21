@@ -50,3 +50,7 @@ Out[]:
 = Explanations =
 
 This module aims to organize your source files automatically, through patterns in filenames.
+
+What it does is :
+- importing pandas and os modules ;
+- listing files in the folder specified by **srcPath** ;
