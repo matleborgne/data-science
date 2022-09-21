@@ -52,9 +52,9 @@ Out[]:
 This module aims to organize your source files automatically, through patterns in filenames.
 
 What it does is :
-* '''imports modules''' pandas and os ;
-* '''lists files''' in the folder specified by srcPath ;
-* '''creates a DataFrame''' where each column has a label and is filled with files which follow a specific pattern.
+* '''importing modules''' pandas and os ;
+* '''listing files''' in the folder specified by srcPath ;
+* '''creating a DataFrame''' where each column has a label and is filled with files which follow a specific pattern.
 
 Thus, it needs the following input :
 * srcPath, the path of source files in a string variable ;
