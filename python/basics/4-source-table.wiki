@@ -25,12 +25,12 @@ def src_targeting(srcPath:str, srcStruct:dict):
 = Howto =
 
 <source lang="python3">
-# Variables
+ # Variables
 srcPath = '/home/mleborgne/test'
 srcStruct = {'achats':'journal-HA', \
              'ventes':'journal-VT'}
 
-# Usage
+ # Usage
 dfSource = src_targeting(srcPath, srcStruct)
 
 dfSource.head()
