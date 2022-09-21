@@ -71,7 +71,8 @@ This can be your output folder in the case your restart any script.
 What it does is :
 * '''importing modules''' pandas and os ;
 * '''listing files''' in the folder specified by folderPath ;
-* '''creating a DataFrame''' where each column has a label and is filled with files which follow a specific pattern.
+* '''filtering files''' following a specific pattern ;
+* '''deleting files''' which follow this pattern.
 
 Thus, it needs the following input :
 * folderPath, the path of files in a string variable ;
