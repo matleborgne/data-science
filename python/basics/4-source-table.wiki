@@ -1,29 +1,25 @@
 = Code =
 
 <source lang="python3">
- ### PREPARATION SOURCE
- # Liste des fichiers dans source
-npSource = np.array([os.path.join(root, name) \
-   for root, dirs, files in os.walk(pathSource) \
-   for name in files])
-
- # Fonction de ciblage
-def trouve(texte, liste):
-    return np.where(np.char.find(liste, texte) >= 0)
-
- # Ciblage des fichiers à importer
-dfSOURCE = pd.DataFrame(columns=nomSource)
-for nom in nomSource:
-    dfSOURCE[nom] = pd.Series(npSource[trouve(nom, npSource)])
+def src_targeting(srcPath:str, srcStruct:dict):
+    # srcPath   : path of source data
+    # srcStruct : label of source type, pattern of source type in files
     
- # Renommage des colonnes source
- # Trouve chaque élément i de la ligne 0 dans la ligne 1 et le remplace par lui
-for i in renomSource[0]:
-    dfSOURCE.columns = dfSOURCE.columns.str.replace(i, \
-       str(renomSource[1][trouve(i, renomSource)[1]])[2:-2], regex=True)
+    import pandas as pd, os
+    
+    # Listing files in directory
+    fileList = [os.path.join(root, name) \
+    for root, dirs, files in os.walk(srcPath) \
+    for name in files]
 
- # Extrait du résultat
-dfSOURCE.head()
+    # Creation of a source dataframe with categories/type of source
+    dfSource = pd.DataFrame()
+    for label,pattern in srcStruct.items():
+        targetList = pd.Series(fileList)\
+            [pd.Series(fileList).str.contains(rf'{pattern}')].values
+        dfSource[label] = pd.Series(targetList)
+    
+    return dfSource
 </source>
 
 <source>
