@@ -29,22 +29,21 @@ def folder_cleaning(folderPath:str, filePattern:str):
 = Example =
 
 <source lang="python3">
- # Variables
-srcPath = '/home/mleborgne/test'
-srcStruct = {'achats':'journal-HA', \
-             'ventes':'journal-VT'}
+folderPath = '/home/mleborgne/test'
+filePattern = '\.txt|\.csv'
 
- # Usage
-dfSource = src_targeting(srcPath, srcStruct)
-
-dfSource.head()
+folder_cleaning(folderPath, filePattern)
 </source>
 
 <source>
-Out[]:
-|   |               achats                |               ventes                |
-| 0 | ../source/File _ journal-HA_S1.txt  | ../source/File _ journal-VT_S1.txt  |
-| 1 | ../source/File _ journal-HA_S2.txt  | ../source/File _ journal-VT_S2.txt  |
+Before:
+-rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 blabla.csv
+-rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 blabla.txt
+-rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 csv.autrechose
+-rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 txt.autrechose
+
+After:
+
 </source>
 
 
