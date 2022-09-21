@@ -39,19 +39,19 @@ folder_cleaning(folderPath, filePattern)
 '''Before:'''
 -rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 blabla.csv
 -rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 blabla.txt
--rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 blabla_csv.autrechose
--rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 txt.autrechose
+-rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 csv.notdeleted
+-rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 txt.notdeleted
 
 '''After:'''
--rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 blabla_csv.autrechose
--rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 txt.autrechose
+-rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 csv.notdeleted
+-rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 txt.notdeleted
 </source>
 
 <source lang="python3">
 folderPath = '/home/mleborgne/test'
 filePattern = '\.txt|.csv'
 
- # Here, the ".csv" withtout "\" means any character (".") following by "csv"
+ # Here, the ".csv" withtout "\" means any character (the ".") following by "csv"
  # See REGEX (regular expressions) documentation
 
 folder_cleaning(folderPath, filePattern)
@@ -59,7 +59,7 @@ folder_cleaning(folderPath, filePattern)
 
 <source>
 '''After:'''
--rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 txt.autrechose
+-rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 txt.notdeleted
 </source>
 
 = Explanation =
