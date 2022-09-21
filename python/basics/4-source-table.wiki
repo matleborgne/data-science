@@ -55,4 +55,9 @@ What it does is :
 * '''importing modules''' pandas and os ;
 * '''listing files''' in the folder specified by srcPath ;
 * '''create a DataFrame''' with the following logic :
-** test
+** 
+**
+
+Thus, it needs the following input :
+* srcPath, the path of source files in a string variable ;
+* srcStruct, the structure you want for your DataFrame, in a dictionnary variable {'label':'pattern'}
