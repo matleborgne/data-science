@@ -2,7 +2,7 @@
 aliases : [target, targeting, ciblage, cibler, source, python, module python, python module, py]
 ---
 
-#python #module #basics #targeting #source
+    #python #module #basics #targeting #source
 
 
 = Module =
