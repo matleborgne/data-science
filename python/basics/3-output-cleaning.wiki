@@ -36,13 +36,13 @@ folder_cleaning(folderPath, filePattern)
 </source>
 
 <source>
-Before:
+'''Before:'''
 -rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 blabla.csv
 -rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 blabla.txt
 -rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 csv.autrechose
 -rw-r--r--. 1 mleborgne mleborgne    0 21 sept. 17:16 txt.autrechose
 
-After:
+'''After:'''
 
 </source>
 
