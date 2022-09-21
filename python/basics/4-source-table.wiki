@@ -34,7 +34,6 @@ srcStruct = {'achats':'journal-HA', \
              'ventes':'journal-VT'}
 
  # Usage
-In[]:
 dfSource = src_targeting(srcPath, srcStruct)
 
 dfSource.head()
