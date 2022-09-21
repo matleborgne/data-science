@@ -1,32 +1,62 @@
-= Code =
+= Module =
 
 <source lang="python3">
- ### NETTOYAGE OUTPUT
- # Liste des fichiers du dossier output
-listeOutput = [os.path.join(root, name) \
-     for root, dirs, files in os.walk(pathOutput) \
-     for name in files]
-
-npOutput = np.array(listeOutput)
-
- # Ciblage des fichiers et nettoyage
-if npOutput.size != 0:
-    npCible = npOutput[np.where(np.char.find(npOutput, f'.txt') >= 0)]
-
-    # Nettoyage
-    for cible in npCible:
+def folder_cleaning(folderPath:str, filePattern:str):
+    # This module aims to cleanup any folder ,
+    # but with patterns in filenames.
+    
+    # folderPath  : path of folder to clean
+    # filePattern : criteria on files to delete or not
+    
+    ## => help : to delete text and csv files, pattern will be :
+    ## =>         '\.txt|\.csv'
+    
+    import pandas as pd, os
+    
+    # Listing files in directory
+    fileList = [os.path.join(root, name) \
+        for root, dirs, files in os.walk(folderPath) \
+        for name in files]
+    
+    # Applying criteria to only delete specific files
+    targetList = pd.Series(fileList)\
+        [pd.Series(fileList).str.contains(rf'{filePattern}')].values
+    
+    for cible in targetList:
         os.remove(cible)
 </source>
 
-= Explications =
+= Example =
 
-== Liste des fichiers du dossier output ==
+<source lang="python3">
+ # Variables
+srcPath = '/home/mleborgne/test'
+srcStruct = {'achats':'journal-HA', \
+             'ventes':'journal-VT'}
 
-On utilise le module '''os''' afin de lister les fichiers du dossier output. <br>
-Ensuite, on stocke la liste obtenue sous forme de série '''numpy'''
+ # Usage
+dfSource = src_targeting(srcPath, srcStruct)
 
-== Ciblage des fichiers et nettoyage ==
+dfSource.head()
+</source>
 
-Cible les fichiers à supprimer selon un critère de nommage donné, via la recherche de texte du module '''numpy'''. <br>
-Ici, nous avons choisi l'extension ".txt". <br>
-Enfin, le module '''os''' va supprimer les fichiers ciblés.
+<source>
+Out[]:
+|   |               achats                |               ventes                |
+| 0 | ../source/File _ journal-HA_S1.txt  | ../source/File _ journal-VT_S1.txt  |
+| 1 | ../source/File _ journal-HA_S2.txt  | ../source/File _ journal-VT_S2.txt  |
+</source>
+
+
+= Explanation =
+
+This module aims to organize your source files automatically, through patterns in filenames.
+
+What it does is :
+* '''importing modules''' pandas and os ;
+* '''listing files''' in the folder specified by srcPath ;
+* '''creating a DataFrame''' where each column has a label and is filled with files which follow a specific pattern.
+
+Thus, it needs the following input :
+* srcPath, the path of source files in a string variable ;
+* srcStruct, the structure you want for your DataFrame, in a dictionnary variable {'label':'pattern'}.
