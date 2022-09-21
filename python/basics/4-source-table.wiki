@@ -2,6 +2,9 @@
 
 <source lang="python3">
 def src_targeting(srcPath:str, srcStruct:dict):
+    # This module aims to organize your source files automatically,
+    # through patterns in filenames.
+    
     # srcPath   : path of source data
     # srcStruct : label of source type, pattern of source type in files
     
@@ -45,3 +48,5 @@ Out[]:
 
 
 = Explanations =
+
+This module aims to organize your source files automatically, through patterns in filenames.
