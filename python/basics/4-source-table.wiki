@@ -25,7 +25,7 @@ def src_targeting(srcPath:str, srcStruct:dict):
     return dfSource
 </source>
 
-= Howto =
+= Howtouse =
 
 <source lang="python3">
  # Variables
