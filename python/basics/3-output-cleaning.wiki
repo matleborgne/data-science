@@ -48,10 +48,11 @@ folder_cleaning(folderPath, filePattern)
 </source>
 
 <source lang="python3">
+    # ATTENTION
 folderPath = '/home/mleborgne/test'
 filePattern = '\.txt|.csv'
 
- # Here, the ".csv" withtout "\" means any character (the ".") following by "csv"
+ # Here, the ".csv" without "\" means any character (the ".") following by "csv"
  # See REGEX (regular expressions) documentation
 
 folder_cleaning(folderPath, filePattern)
