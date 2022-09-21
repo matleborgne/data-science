@@ -65,13 +65,14 @@ folder_cleaning(folderPath, filePattern)
 
 = Explanation =
 
-This module aims to organize your source files automatically, through patterns in filenames.
+This module aims to cleanup any folder of your project, by deleting files following specific pattern. </br>
+This can be your output folder in the case your restart any script.
 
 What it does is :
 * '''importing modules''' pandas and os ;
-* '''listing files''' in the folder specified by srcPath ;
+* '''listing files''' in the folder specified by folderPath ;
 * '''creating a DataFrame''' where each column has a label and is filled with files which follow a specific pattern.
 
 Thus, it needs the following input :
-* srcPath, the path of source files in a string variable ;
-* srcStruct, the structure you want for your DataFrame, in a dictionnary variable {'label':'pattern'}.
+* folderPath, the path of files in a string variable ;
+* filePattern, the pattern criteria to delete files, as a string variable. Be aware it uses REGEX (regular expressions), thus it seems complicated in terms of syntax, even though it is extremely powerful.
