@@ -77,8 +77,9 @@ xlStruct = {'sheet_name':0,   # name of the sheet to import - format 0,1,2 or "S
             }
 
  # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
-csvStruct = {'delimiter':';',           # separator or delimiter in CSV-like file
-            'encoding':'iso-8859-1',    # file encoding (utf8, cp1252, iso-8859-1, etc.)
+csvStruct = {'delimiter':'|',  # separator or delimiter in CSV-like file
+            'encoding':'utf8', # file encoding (utf8, cp1252, iso-8859-1, etc.)
+            'header':[1,2]     # row to use as column label (default = 'infer')
             }
 
  # Usage
