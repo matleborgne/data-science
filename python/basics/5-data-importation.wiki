@@ -1,6 +1,6 @@
 = Module =
 <source lang="python3">
-def data_import(srcData:pd.DataFrame, dataStruct:dict, customStruct={}):
+def data_import(srcData:pd.DataFrame, dataStruct:dict, customExt={}):
     # This module aims to import and concatenate files automatically,
     # from a source DataFrame : one DataFrame per column, concatenate all files in column
     
@@ -30,15 +30,15 @@ def data_import(srcData:pd.DataFrame, dataStruct:dict, customStruct={}):
             
             # Apply any custom extension according to file extension
             # Ex : .txt to import like a .csv file
-            if type(customStruct) == dict:
+            if type(customExt) == dict:
                 try:
-                    customStruct[srcFileExt]
+                    customExt[srcFileExt]
                 except KeyError:
                     srcExt = srcFileExt
                 else:
-                    srcExt = customStruct[srcFileExt]
-            elif type(customStruct) == str:
-                srcExt = customStruct
+                    srcExt = customExt[srcFileExt]
+            elif type(customExt) == str:
+                srcExt = customExt
             
             
             # Importation in itself, with custom parameters
@@ -121,15 +121,15 @@ Out[]:
 <source lang="python3">
  ##### Second example : importation with custom file structure
 
- ### Variable for custom importation => .txt files will be treated as .csv
-customStruct = {'txt':'csv',
-                'del':'csv',
-                }
+ ### Variable for custom importation => .txt files will be treated as .csv extension
+customExt = {'txt':'csv',
+            'del':'csv',
+             }
 
  ### I want to import one specific .TXT file with .CSV structure (delimited, labeled, etc.)
  
- # First method : with customStruct dictionnary, the most versatile
-df = data_import(./myFile.txt, csvStruct, customStruct)
+ # First method : with customExt dictionnary, the most versatile
+df = data_import(./myFile.txt, csvStruct, customExt)
 
  # Second method : with string directly in the function, the simpler
 df = data_import(./myFile.txt, csvStruct, 'csv')
