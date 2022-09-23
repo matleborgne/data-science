@@ -87,7 +87,7 @@ What it does is :
 * '''create a dictionnary''' of DataFrame, empty for now ;
 * '''loop''' through columns of a source DataFrame ;
 * '''create an empty DataFrame''' for each column of the source DataFrame ;
-* '''loop''' through lignes of this specific source column (one line = one file) ;
+* '''loop''' through lines of this specific source column (one line = one file) ;
 * '''determine the extension''' of source file (excel, csv, etc.) ;
 * '''import the file''' as a DataFrame, following the option you put in xlStruct, csvStruct, etc. ;
 * '''concatenate the DataFrame''' with previous DataFrame from the same source column.
