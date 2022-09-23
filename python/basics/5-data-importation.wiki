@@ -102,10 +102,10 @@ csvStruct = {'delimiter':'|',  # separator or delimiter in CSV-like file
             }
 
  ### Usage
-dictDf = data_import(srcDataFrame, xlStruct)
+df = data_import(srcDataFrame, xlStruct)
 
  ### Visualization
-dictDf['achats'].head()
+df['achats'].head()
 </source>
 
 <source>
