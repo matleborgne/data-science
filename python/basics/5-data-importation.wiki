@@ -131,13 +131,13 @@ customStruct = {'txt':'csv',
  ### I want to import one specific .TXT file with .CSV structure (delimited, labeled, etc.)
  
  # First method : with customStruct dictionnary, the most versatile
-df = data_import(myTxtFile, csvStruct, customStruct)
+df = data_import(./myFile.txt, csvStruct, customStruct)
 
  # Second method : with string directly in the function, the simpler
-df = data_import(myTxtFile, csvStruct, 'csv')
+df = data_import(./myFile.txt, csvStruct, 'csv')
 
  ### Visualization
-df['achats'].head()
+df['myFile'].head()
 </source>
 
 = Explanation =
