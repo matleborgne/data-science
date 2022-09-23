@@ -156,4 +156,4 @@ What it does is :
 Thus, it needs the following input :
 * srcDataFrame, the path of source files previously organized in a coherent DataFrame ;
 * dataStruct, the structure you want for your DataFrame, in a dictionnary variable {'settingName':'settingOption'} ;
-* customStruct, if you want to import files without automatic detection of the extension (xls, csv, txt, etc.)
+* customExt, if you want to import files without automatic detection of the extension (xls, csv, txt, etc.)
