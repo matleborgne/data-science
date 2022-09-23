@@ -16,13 +16,20 @@ def src_targeting(srcPath:str, srcStruct:dict):
     for name in files]
 
     # Creation of a source dataframe with categories/type of source
-    dfSource = pd.DataFrame()
-    for label,pattern in srcStruct.items():
-        targetList = pd.Series(fileList)\
-            [pd.Series(fileList).str.contains(rf'{pattern}')].values
-        dfSource[label] = pd.Series(targetList)
-    
-    return dfSource
+    if len(fileList) > 0:
+        
+        dfSource = pd.DataFrame()
+        
+        for label,pattern in srcStruct.items():
+            targetList = pd.Series(fileList)\
+                [pd.Series(fileList).str.contains(rf'{pattern}')].values
+                
+            dfSource[label] = pd.Series(targetList)
+            
+        return dfSource
+        
+    else:
+        return print(f'/!\\ The folder "{srcPath}" seems to be empty')
 </source>
 
 = Example =
