@@ -84,7 +84,7 @@ def data_import(srcData:pd.DataFrame, dataStruct:dict, customStruct={}):
 = Example =
 
 <source lang="python3">
- ##### First example : importation from source DataFrame
+ ##### First example : importation from source DataFrame with concatenation
 
  ### Variables
  # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html
