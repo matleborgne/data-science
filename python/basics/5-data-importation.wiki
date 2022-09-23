@@ -63,7 +63,8 @@ csvStruct = {'delimiter':';',            # separator or delimiter in CSV-like fi
  # Usage
 dictDf = data_import(srcDataFrame, xlStruct)
 
-dictDf['achats']
+ # Visualization
+dictDf['achats'].head()
 </source>
 
 <source>
