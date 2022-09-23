@@ -6,7 +6,6 @@ def data_import(srcData:pd.DataFrame, dataStruct:dict, customStruct={}):
     
     # srcDataFrame              : path of source data
     # xlStruct, csvStruct, etc. : dictionnaries - structure you want for the importation
-    # If you don't use csv files, just create an empty dictionnary csvStruct = {}
     # With customFormat, you can specify to import, for instance, a .txt file as a csv.
         
     import pandas as pd, os
