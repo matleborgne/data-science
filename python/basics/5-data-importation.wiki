@@ -83,7 +83,9 @@ def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict, customStruct={}):
 = Example =
 
 <source lang="python3">
- # Variables
+ ##### First example : importation from source DataFrame
+
+ ### Variables
  # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html
  # Default values here
 xlStruct = {'sheet_name':0,   # name of the sheet to import - format 0,1,2 or "Sheet1"
@@ -99,10 +101,10 @@ csvStruct = {'delimiter':'|',  # separator or delimiter in CSV-like file
             'header':[1,2]     # row to use as column label (default = 'infer')
             }
 
- # Usage
+ ### Usage
 dictDf = data_import(srcDataFrame, xlStruct)
 
- # Visualization
+ ### Visualization
 dictDf['achats'].head()
 </source>
 
@@ -117,6 +119,9 @@ Out[]:
 </source>
 
 <source lang="python3">
+ ##### Second example : importation with custom file structure
+
+
  ### Variable for custom importation
 customStruct = {'txt':'csv',
                 'del':'csv',
