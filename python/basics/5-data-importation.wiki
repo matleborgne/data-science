@@ -13,7 +13,7 @@ def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict):
     
     
     # Manage the case where you have or choose to import only one column in source,
-    # which raises an IndexError because srcDataFrame is a Series and not a DataFrame
+    # which raises an IndexError because srcDataFrame becomes a Series and not a DataFrame
     try:
         srcDataFrame.shape[1]
     except IndexError:
