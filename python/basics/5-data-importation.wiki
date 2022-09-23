@@ -1,6 +1,6 @@
 = Module =
 <source lang="python3">
-def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict, customStruct={}):
+def data_import(srcData:pd.DataFrame, dataStruct:dict, customStruct={}):
     # This module aims to import and concatenate files automatically,
     # from a source DataFrame : one DataFrame per column, concatenate all files in column
     
@@ -13,18 +13,19 @@ def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict, customStruct={}):
     dictDf = {}
     
     
-    # Manage the case where you have or choose to import only one column in source,
-    # which raises an IndexError because srcDataFrame becomes a Series and not a DataFrame
-    try:
-        srcDataFrame.shape[1]
-    except IndexError:
-        srcDataFrame = srcDataFrame.to_frame()
+    # Manage the case where you import something else than a DataFrame
+    if type(srcData) == pd.Series:
+        srcData = pd.DataFrame(srcData)
+    elif type(srcData) == str:
+        srcFileName = srcData.replace('\\', '/').split('/')[-1]
+        srcColumnName = os.path.splitext(srcFileName)[0]
+        srcData = pd.DataFrame({srcColumnName:[srcData]})
     
     
-    for column in srcDataFrame.columns:
+    for column in srcData.columns:
         dictDf[column] = pd.DataFrame()
     
-        for file in srcDataFrame[column].loc[srcDataFrame[column].notna()]:
+        for file in srcData[column].loc[srcData[column].notna()]:
             tmpDf = pd.DataFrame()
             srcFileExt = os.path.splitext(file)[1]
             
