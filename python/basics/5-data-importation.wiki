@@ -123,7 +123,7 @@ Out[]:
  ##### Second example : importation with custom file structure
 
 
- ### Variable for custom importation
+ ### Variable for custom importation => .txt files will be treated as .csv
 customStruct = {'txt':'csv',
                 'del':'csv',
                 }
