@@ -56,7 +56,7 @@ xlStruct = {'sheet_name':0,   # name of the sheet to import - format 0,1,2 or "S
             }
 
  # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
-csvStruct = {'delimiter':';',            # separator or delimiter in CSV-like file
+csvStruct = {'delimiter':';',           # separator or delimiter in CSV-like file
             'encoding':'iso-8859-1',    # file encoding (utf8, cp1252, iso-8859-1, etc.)
             }
 
@@ -80,93 +80,19 @@ Out[]:
 
 = Explanation =
 
-This module aims to organize your source files automatically, through patterns in filenames.
+This module aims to import and concatenate files automatically, from a source DataFrame : one DataFrame per column, concatenate all files in this column.
 
 What it does is :
-* '''importing modules''' pandas and os ;
-* '''listing files''' in the folder specified by srcPath ;
-* '''creating a DataFrame''' where each column has a label and is filled with files which follow a specific pattern.
+* '''import modules''' pandas and os ;
+* '''create a dictionnary''' of DataFrame, empty for now ;
+* '''loop''' through columns of a source DataFrame ;
+* '''create''' an empty DataFrame''' for each column of the source DataFrame ;
+* '''loop''' through lignes of this specific source column (one line = one file) ;
+* '''determine the extension''' of source file (excel, csv, etc.) ;
+* '''import the file''' as a DataFrame, following the option you put in xlStruct, csvStruct, etc. ;
+* '''concatenate the DataFrame''' with previous DataFrame from the same source column.
+
 
 Thus, it needs the following input :
-* srcPath, the path of source files in a string variable ;
-* srcStruct, the structure you want for your DataFrame, in a dictionnary variable {'label':'pattern'}.
-
-<source>
-Out[]:
-     PieceNum    PieceDate   ValeurUnit   Qte   ValeurTot
-0  1007XXXX85     20180101         8,00    10       80,00
-1  1007XXXX86     20180101        10,00     7       70,00
-2  1007XXXX87     20180101        12,00     5       60,00
-3  1007XXXX88     20180101       118,00     1      118,00
-4  1007XXXX89     20180101         5,00     5       25,00
-</source>
-
-= Explications =
-
-== Dictionnaire de DataFrames ==
-
-Afin de stocker les différents jeux de données, on crée une variable '''df''' de type '''dictionnaire'''.
-Pour rappel, un dictionnaire est un objet qui stocke d'autres objets et les identifie à travers une '''clé''' ou un '''indice'''. <br>
-Par exemple :
-<source lang="python3">
- # Exemple avec une liste
-pneusLis = [4, 2, 3]
-
- # Exemple avec un dictionnaire
-pneusDic = {\
- 'voiture':4,\
- 'velo':2,\
- 'tricycle':3}
-</source>
-
-L'avantage du dictionnaire est de pouvoir parcourir de manière '''transparente''' les éléments, par exemple :
-<source lang="python3">
- # Obtenir le nombre de pneus d'un vélo
- # ... avec la liste
-pneusLis[1]
- 
- # ... avec le dictionnaire
-pneusDic['velo']
-</source>
-<source>
-Out[]:
-2
-</source>
-
-Ici, comme on va manipuler un ensemble de jeux de données, qu'on veut effectivement parcourir de manière transparente, on crée un dictionnaire '''df''' (df pour DataFrame). <br>
-
-== Création des DataFrame vides ==
-
-On remplit ensuite le dictionnaire avec les entrées correspondantes aux colonnes de la '''table source'''. <br>
-On obtient alors le dictionnaire suivant :
-<source lang="python3">
-df
-</source>
-<source>
-Out[]:
-{'achats': Empty DataFrame     Columns: []     Index: [],
-'ventes': Empty DataFrame      Columns: []     Index: []}
-</source>
-
-== Importation des données ==
-
-Une double boucle '''for''' parcoure :
-* chaque '''colonne''' de la table source, représentant chaque DataFrame final ;
-* chaque '''ligne''' de la table source, représentant les fichiers à concaténer.
-
-Trois étapes sont alors réalisées :
-* un DataFrame temporaire est créé (dfTEMP), important le fichier de type CSV avec les paramètres choisis durant la phase variables ;
-* une concaténation est effectuée sur le DataFrame contenu dans le dictionnaire ;
-* le numéro d'index est réinitialisé (ce qui a pour effet de créer une colonne index dans le jeu de données, qu'il convient alors de supprimer).
-
-Il est important de réinitialiser l'index si l'on veut travailler avec. Sinon, l'appel à un numéro d'index retournera plusieurs résultats, chaque fichier source ayant sa propre ligne numérotée ainsi :
-<source lang="python3">
- # Exemple d'affichage de la 4e ligne -> index 3
-df['achats'].loc[3]
-</source>
-<source>
-Out[]:
-     PieceNum    PieceDate   ValeurUnit   Qte   ValeurTot
-3  1007XXXX88     20180101       118,00     1      118,00
-3  1008XXXX05     20180701        20,00     4       80,00
-</source>
+* srcDataFrame, the path of source files previously organized in a coherent DataFrame ;
+* dataStruct, the structure you want for your DataFrame, in a dictionnary variable {'settingName':'settingOption'}.
