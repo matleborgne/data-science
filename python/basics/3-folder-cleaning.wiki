@@ -19,11 +19,12 @@ def folder_cleaning(folderPath:str, filePattern:str):
         for name in files]
     
     # Applying criteria to only delete specific files
-    targetList = pd.Series(fileList)\
-        [pd.Series(fileList).str.contains(rf'{filePattern}')].values
-    
-    for cible in targetList:
-        os.remove(cible)
+    if len(fileList) > 0:
+        targetList = pd.Series(fileList)\
+            [pd.Series(fileList).str.contains(rf'{filePattern}')].values
+        
+        for cible in targetList:
+            os.remove(cible)
 </source>
 
 = Example =
