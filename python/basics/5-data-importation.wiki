@@ -11,13 +11,23 @@ def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict):
     import pandas as pd, os
     dictDf = {}
     
-    for colonne in srcDataFrame.columns:
-        dictDf[colonne] = pd.DataFrame()
-        
-        for file in srcDataFrame[colonne].loc[srcDataFrame[colonne].notna()]:
+    
+    # Manage the case where you have or choose to import only one column in source,
+    # which raises an IndexError because srcDataFrame is a Series and not a DataFrame
+    try:
+        srcDataFrame.shape[1]
+    except IndexError:
+        srcDataFrame = srcDataFrame.to_frame()
+    
+    
+    for column in srcDataFrame.columns:
+        dictDf[column] = pd.DataFrame()
+    
+        for file in srcDataFrame[column].loc[srcDataFrame[column].notna()]:
             srcFileType = os.path.splitext(file)[1]
             
             if srcFileType.find('xls') > 0:
+                xlStruct = dataStruct
                 tmpDf = pd.read_excel(\
                     file, \
                     sheet_name=xlStruct['sheet_name'], \
@@ -28,16 +38,27 @@ def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict):
                     dtype=object)    
             
             elif srcFileType.find('csv') > 0:
+                csvStruct = dataStruct
                 tmpDf = pd.read_csv(\
                     file, \
                     sep=csvStruct['delimiter'], \
                     encoding=csvStruct['encoding'], \
+                    header=csvStruct['header'], \
                     dtype=object)       
-                            
-            dictDf[colonne] = pd.concat([dictDf[colonne], tmpDf])
+
+            elif srcFileType.find('txt') > 0:
+                txtStruct = dataStruct
+                tmpDf = pd.read_csv(\
+                    file, \
+                    sep=txtStruct['delimiter'], \
+                    encoding=txtStruct['encoding'], \
+                    header=txtStruct['header'], \
+                    dtype=object)    
+
+            dictDf[column] = pd.concat([dictDf[column], tmpDf])
         
-        dictDf[colonne] = dictDf[colonne].reset_index()
-        del dictDf[colonne]['index']
+        dictDf[column] = dictDf[column].reset_index()
+        del dictDf[column]['index']
         
     return dictDf
 </source>
