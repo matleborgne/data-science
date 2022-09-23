@@ -1,4 +1,4 @@
-= Code =
+= Module =
 <source lang="python3">
 def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict):
     # This module aims to import and concatenate files automatically,
@@ -41,6 +41,54 @@ def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict):
         
     return dictDf
 </source>
+
+= Example =
+
+<source lang="python3">
+ # Variables
+ # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_excel.html
+ # Default values here
+xlStruct = {'sheet_name':0,   # name of the sheet to import - format 0,1,2 or "Sheet1"
+            'header':0,       # row to use as column label
+            'skiprows':0,     # ignore the first X rows
+            'index_col':None, # column to use as index/row label
+            'usecols':None,   # which columns to import (format 'A:X', or 1,2,3...)
+            }
+
+ # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html
+csvStruct = {'delimiter':';',            # separator or delimiter in CSV-like file
+            'encoding':'iso-8859-1',    # file encoding (utf8, cp1252, iso-8859-1, etc.)
+            }
+
+ # Usage
+dictDf = data_import(srcDataFrame, xlStruct)
+
+dictDf['achats']
+</source>
+
+<source>
+Out[]:
+     PieceNum    PieceDate   ValeurUnit   Qte   ValeurTot
+0  1007XXXX85     20180101         8,00    10       80,00
+1  1007XXXX86     20180101        10,00     7       70,00
+2  1007XXXX87     20180101        12,00     5       60,00
+3  1007XXXX88     20180101       118,00     1      118,00
+4  1007XXXX89     20180101         5,00     5       25,00
+</source>
+
+
+= Explanation =
+
+This module aims to organize your source files automatically, through patterns in filenames.
+
+What it does is :
+* '''importing modules''' pandas and os ;
+* '''listing files''' in the folder specified by srcPath ;
+* '''creating a DataFrame''' where each column has a label and is filled with files which follow a specific pattern.
+
+Thus, it needs the following input :
+* srcPath, the path of source files in a string variable ;
+* srcStruct, the structure you want for your DataFrame, in a dictionnary variable {'label':'pattern'}.
 
 <source>
 Out[]:
