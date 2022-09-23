@@ -1,12 +1,13 @@
 = Module =
 <source lang="python3">
-def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict):
+def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict, customStruct={}):
     # This module aims to import and concatenate files automatically,
     # from a source DataFrame : one DataFrame per column, concatenate all files in column
     
     # srcDataFrame              : path of source data
     # xlStruct, csvStruct, etc. : dictionnaries - structure you want for the importation
     # If you don't use csv files, just create an empty dictionnary csvStruct = {}
+    # With customFormat, you can specify to import, for instance, a .txt file as a csv.
         
     import pandas as pd, os
     dictDf = {}
@@ -24,9 +25,25 @@ def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict):
         dictDf[column] = pd.DataFrame()
     
         for file in srcDataFrame[column].loc[srcDataFrame[column].notna()]:
-            srcFileType = os.path.splitext(file)[1]
+            tmpDf = pd.DataFrame()
+            srcFileExt = os.path.splitext(file)[1]
             
-            if srcFileType.find('xls') > 0:
+            # Apply any custom extension according to file extension
+            # Ex : .txt to import like a .csv file
+            if type(customStruct) == dict:
+                try:
+                    customStruct[srcFileExt]
+                except KeyError:
+                    srcExt = srcFileExt
+                else:
+                    srcExt = customStruct[srcFileExt]
+            elif type(customStruct) == str:
+                srcExt = customStruct
+            
+            
+            # Importation in itself, with custom parameters
+            # Modify the parameters in your dictionnaries variables, not here
+            if srcExt.find('xls') >= 0:
                 xlStruct = dataStruct
                 tmpDf = pd.read_excel(\
                     file, \
@@ -37,7 +54,7 @@ def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict):
                     usecols=xlStruct['usecols'], \
                     dtype=object)    
             
-            elif srcFileType.find('csv') > 0:
+            elif srcExt.find('csv') >= 0:
                 csvStruct = dataStruct
                 tmpDf = pd.read_csv(\
                     file, \
@@ -46,7 +63,7 @@ def data_import(srcDataFrame:pd.DataFrame, dataStruct:dict):
                     header=csvStruct['header'], \
                     dtype=object)       
 
-            elif srcFileType.find('txt') > 0:
+            elif srcExt.find('txt') >= 0:
                 txtStruct = dataStruct
                 tmpDf = pd.read_csv(\
                     file, \
