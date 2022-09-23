@@ -116,6 +116,23 @@ Out[]:
 4  1007XXXX89     20180101         5,00     5       25,00
 </source>
 
+<source lang="python3">
+ ### Variable for custom importation
+customStruct = {'txt':'csv',
+                'del':'csv',
+                }
+
+ ### I want to import one specific .TXT file with .CSV structure (delimited, labeled, etc.)
+ 
+ # First method : with customStruct dictionnary, the most versatile
+df = data_import(myTxtFile, csvStruct, customStruct)
+
+ # Second method : with string directly in the function, the simpler
+df = data_import(myTxtFile, csvStruct, 'csv')
+
+ ### Visualization
+df['achats'].head()
+</source>
 
 = Explanation =
 
